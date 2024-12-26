@@ -1,0 +1,94 @@
+body {
+    font-family: Montserrat;
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 80px;
+}
+
+.encabezado .nombre {
+    font-size: 72px;
+    font-weight: 800;
+    gap: 20px;
+}
+
+.encabezado .saludo {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.presentacion {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 200px;
+    text-align: center;
+}
+
+.proyectos {
+    padding: 100px 80px;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.proyectos .descrip {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.proyectos-container {
+    margin: 50px 180px;
+    padding: 15px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    justify-content: space-between;
+    background-color: lightgray;
+}
+
+.proyecto {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+}
+
+.proyectos-container h1 {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.proyectos-container p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 5px;
+}
+
+.proyectos-container a {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: auto; /* Empuja el enlace hacia abajo */
+}
+
+/* Contenedor de la imagen */
+.proyectos-container .proyecto-imagen {
+    display: inline-block; /* Adaptar el tamaño del contenedor al de la imagen */
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.proyectos-container .proyecto-imagen img {
+    border-radius: 3%;
+    width: 100%; /* Ajustar la imagen al contenedor */
+    height: auto; /* Mantener la relación de aspecto */
+}
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 35px;
+    padding: 15px;
+}
