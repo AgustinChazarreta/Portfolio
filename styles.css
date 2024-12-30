@@ -1,12 +1,14 @@
 body {
     font-family: Montserrat;
+    background-color: whitesmoke !important;
 }
 
 .encabezado {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 150px 80px;
+    text-align: center;
+    padding: 140px 0px;
 }
 
 .encabezado .nombre {
@@ -23,19 +25,31 @@ body {
 .presentacion {
     font-size: 16px;
     font-weight: 400;
-    padding: 0 200px;
+    padding: 50px 100px;
     text-align: center;
 }
 
 .proyectos {
-    padding: 100px 80px;
     font-size: 28px;
     font-weight: 900;
+    background-color: #A0D683;
+    border-radius: 30% 15% 20% 15%;
+    padding: 80px 0;
+}
+
+.proyectos .titulo {
+    padding: 10px 0 0 150px;
 }
 
 .proyectos .descrip {
     font-size: 16px;
     font-weight: 400;
+    padding: 0 0 0 150px;
+}
+
+.proyectos .container-fluid {
+    padding-left: 80px;
+    padding-right: 50px;
 }
 
 .proyectos-container {
@@ -85,10 +99,23 @@ body {
     height: auto; /* Mantener la relación de aspecto */
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    padding: 70px 0 30px 70px;
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(87, 86, 91);
+}
+
 .contacto {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     gap: 30px;
     font-size: 35px;
-    padding: 15px;
+    padding: 70px 30px 30px 0;
 }
