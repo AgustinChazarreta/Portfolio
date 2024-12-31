@@ -1,6 +1,7 @@
 body {
-    font-family: Montserrat;
-    background-color: whitesmoke !important;
+    font-family: Poppins !important;
+    background-color: #0a0a0a !important;
+    background: radial-gradient(circle,#2a2a2a,#0a0a0a) !important;
 }
 
 .encabezado {
@@ -8,36 +9,51 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 140px 0px;
+    color: white;
+    padding: 80px 0; /* Mantén el tamaño del encabezado constante */
+}
+
+.encabezado-container {
+    background: radial-gradient(circle at top right, #042327, #04616E, #77c45d);
+    padding: 70px 0; /* Puedes modificar el padding para ajustar el tamaño del contenedor */
+    width: 90%;
+    border-radius: 60px;
 }
 
 .encabezado .nombre {
-    font-size: 72px;
+    font-size: 80px;
     font-weight: 800;
     gap: 20px;
+    font-family: Bebas Neue;
 }
 
 .encabezado .saludo {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
 }
 
 .presentacion {
     font-size: 16px;
     font-weight: 400;
-    padding: 50px 100px;
+    padding: 60px 100px;
     text-align: center;
 }
 
 .proyectos {
     font-size: 28px;
     font-weight: 900;
-    background-color: #A0D683;
-    border-radius: 30% 15% 20% 15%;
-    padding: 80px 0;
+    background: linear-gradient(to left, #137481, #77c45d, #abec96);
+    color: #0a0a0a;
+    border-radius: 0 25% 0 15%;
+    padding: 40px 0;
+    box-shadow: 
+    inset 5px 5px 10px rgba(0, 0, 0, 0.6),  /* Sombra interna oscura */
+    inset -5px -5px 10px rgba(168, 222, 150, 0.1); /* Sombra interna clara */
 }
 
 .proyectos .titulo {
+    font-family: Bebas Neue;
+    font-size: 40px;
     padding: 10px 0 0 150px;
 }
 
@@ -99,6 +115,14 @@ body {
     height: auto; /* Mantener la relación de aspecto */
 }
 
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -106,10 +130,12 @@ footer {
 }
 
 .footer {
+    font-family: Bebas Neue;
     padding: 70px 0 30px 70px;
     font-size: 20px;
     font-weight: 800;
     color: rgb(87, 86, 91);
+    color: white;
 }
 
 .contacto {
