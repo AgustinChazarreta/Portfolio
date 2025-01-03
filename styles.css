@@ -1,6 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Poppins !important;
-    background-color: #0a0a0a !important;
+    background-color: #0a0a0a;
     background: radial-gradient(circle,#2a2a2a,#0a0a0a) !important;
 }
 
@@ -10,20 +16,19 @@ body {
     align-items: center;
     text-align: center;
     color: white;
-    padding: 80px 0; /* Mantén el tamaño del encabezado constante */
+    padding: 5rem 0;
 }
 
 .encabezado-container {
-    background: radial-gradient(circle at top right, #042327, #04616E, #77c45d);
-    padding: 70px 0; /* Puedes modificar el padding para ajustar el tamaño del contenedor */
+    background: radial-gradient(circle at top right, #1a1a1a, #afafaf);
+    padding: 3rem 0;
     width: 90%;
-    border-radius: 60px;
+    border-radius: 70px;
 }
 
 .encabezado .nombre {
     font-size: 80px;
     font-weight: 800;
-    gap: 20px;
     font-family: Bebas Neue;
 }
 
@@ -35,20 +40,20 @@ body {
 .presentacion {
     font-size: 16px;
     font-weight: 400;
-    padding: 60px 100px;
+    padding: 3rem 8rem;
     text-align: center;
 }
 
 .proyectos {
     font-size: 28px;
     font-weight: 900;
-    background: linear-gradient(to left, #137481, #77c45d, #abec96);
-    color: #0a0a0a;
+    background: linear-gradient(to right, #2a2a2a, #2f2f2f);
+    color: #fff;
     border-radius: 0 25% 0 15%;
     padding: 40px 0;
     box-shadow: 
     inset 5px 5px 10px rgba(0, 0, 0, 0.6),  /* Sombra interna oscura */
-    inset -5px -5px 10px rgba(168, 222, 150, 0.1); /* Sombra interna clara */
+    inset -5px -5px 10px rgba(212, 219, 209, 0.1); /* Sombra interna clara */
 }
 
 .proyectos .titulo {
@@ -64,55 +69,8 @@ body {
 }
 
 .proyectos .container-fluid {
-    padding-left: 80px;
-    padding-right: 50px;
-}
-
-.proyectos-container {
-    margin: 50px 180px;
-    padding: 15px;
-    border-radius: 15px;
-    display: grid;
-    grid-template-columns: 35% 65%;
-    justify-content: space-between;
-    background-color: lightgray;
-}
-
-.proyecto {
-    display: flex;
-    flex-direction: column; /* Organiza los elementos en columna */
-}
-
-.proyectos-container h1 {
-    font-size: 20px;
-    margin: 5px;
-}
-
-.proyectos-container p {
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0 5px;
-}
-
-.proyectos-container a {
-    color: black;
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: auto; /* Empuja el enlace hacia abajo */
-}
-
-/* Contenedor de la imagen */
-.proyectos-container .proyecto-imagen {
-    display: inline-block; /* Adaptar el tamaño del contenedor al de la imagen */
-    border-radius: 10px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.proyectos-container .proyecto-imagen img {
-    border-radius: 3%;
-    width: 100%; /* Ajustar la imagen al contenedor */
-    height: auto; /* Mantener la relación de aspecto */
+    padding-left: 5rem;
+    padding-right: 3rem;
 }
 
 .card {
@@ -131,10 +89,9 @@ footer {
 
 .footer {
     font-family: Bebas Neue;
-    padding: 70px 0 30px 70px;
+    padding: 50px 0 30px 70px;
     font-size: 20px;
     font-weight: 800;
-    color: rgb(87, 86, 91);
     color: white;
 }
 
@@ -143,5 +100,9 @@ footer {
     justify-content: end;
     gap: 30px;
     font-size: 35px;
-    padding: 70px 30px 30px 0;
+    padding: 50px 30px 30px 0;
+}
+
+.contacto a:hover{
+    color: #a6a6a6 !important;
 }
