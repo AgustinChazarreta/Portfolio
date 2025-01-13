@@ -5,130 +5,416 @@
 }
 
 body {
-    font-family: Poppins !important;
-    
-    background-color: #0a0a0a !important;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0F1215;
+    color: white;
+    line-height: 1.6;
 }
 
+.main-container {
+    margin-right: 100px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0px;
+    background-color: rgba(15, 18, 21, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    z-index: 1000;
+    display: flex;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 6rem;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* Header */
 .encabezado {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 7rem 0;
+    justify-content: center;
+    padding: 0 10%;
+    background-color: #0F1215;
+    position: relative;
 }
 
-.encabezado-container {
-    background-image: url('imgs/fondo-container.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.9); /* Capa oscura con transparencia */
-    background-blend-mode: darken; /* Mezcla la capa oscura con la imagen */
-    padding: 3rem 0;
-    width: 90%;
-    border-radius: 70px;
+.header-content {
+    position: relative;
+    z-index: 1;
 }
 
-
-.encabezado .nombre {
+.nombre {
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 80px;
     font-weight: 800;
-    font-family: Bebas Neue;
+    margin-bottom: 1rem;
 }
 
-.encabezado .saludo {
+.saludo {
     font-size: 15px;
     font-weight: 600;
+    margin-bottom: 1rem;
+    padding: 0 3rem;
 }
 
 .presentacion {
     font-size: 16px;
     font-weight: 400;
-    padding: 3rem 8rem;
-    text-align: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+    color: rgba(255, 255, 255, 0.7);
 }
 
+/* Projects Section */
 .proyectos {
-    font-size: 28px;
-    font-weight: 900;
-    background: linear-gradient(to right, #2a2a2a, #2f2f2f);
-    color: #fff;
-    border-radius: 0 25% 0 15%;
-    padding: 1rem 0;
-    box-shadow: 
-    inset 5px 5px 10px rgba(0, 0, 0, 0.6),  /* Sombra interna oscura */
-    inset -5px -5px 10px rgba(212, 219, 209, 0.1); /* Sombra interna clara */
+    padding: 3rem 5%;
+    background: #13161A;
+    margin: 3rem;
+    margin-left: 6rem;
+    border-radius: 10px;
 }
 
-.proyectos .titulo {
-    font-family: Bebas Neue;
+.titulo {
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 40px;
-    padding: 10px 0 0 150px;
+    margin-bottom: 1rem;
 }
 
-.proyectos .descrip {
+.descrip {
     font-size: 16px;
     font-weight: 400;
-    padding: 0 0 0 150px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
 }
 
-.proyectos .container-fluid {
-    padding-left: 5rem;
-    padding-right: 3rem;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0.95fr));
+    gap: 3rem;
+    justify-content: center;
 }
 
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.project-card {
+    background: #0F1215;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.card:hover {
+.project-card:hover {
     transform: scale(1.03);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
-.card:hover .card-img-top, .card:hover .icon-link i, .card:hover .card-text, .card:hover .card-title {
-    opacity: 1 !important; /* Hace la imagen completamente visible al hacer hover */
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top; /* Asegura que la parte superior sea visible */
+
+    border-radius: 4px;
+    opacity: 0.45;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover img {
+    opacity: 1;
+}
+
+.project-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.45;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover h3 {
+    opacity: 1;
+}
+
+.project-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.45;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover p {
+    opacity: 1;
 }
 
 .icon-container {
-    display: flex !important;
-    justify-content: space-between !important;
+    display: flex; /* Activar Flexbox */
+    justify-content: space-between; /* Separar elementos a los extremos */
+    align-items: center; /* Centrar verticalmente los elementos */
+    font-size: xx-large;
 }
 
-.links {
-    display: flex !important;
-    gap: 15px;
+.tech-stack {
+    display: flex;
+    gap: 1rem;
+    margin: 0rem 1rem;
 }
 
-.links .icon-link:hover {
-    color: #000000 !important; /* Cambia el color cuando se pasa el ratón */
+.tech-stack i {
+    opacity: 0.45;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .tech-stack i {
+    opacity: 1;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0rem 1rem;
+}
+
+.project-links a {
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    transform: scale(1.2); /* Agranda el ícono ligeramente */
+    opacity: 0.45;
+    transition: all 0.3s ease;
 }
 
-footer {
+.project-links a:hover {
+    opacity: 1;
+}
+
+/* Contact Section */
+.contact {
+    background: #13161A;
+    max-width: 650px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    margin: 120px 0 80px 0;
+    padding: 38px;
+    border-radius: 10px;
+    margin-left: 20rem;
 }
 
-.footer {
-    font-family: Bebas Neue;
-    padding: 50px 0 30px 70px;
-    font-size: 20px;
-    font-weight: 800;
+.contact-title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-title h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 50px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%; /* Asegura que ambos ocupen todo el ancho del contenedor */
+    padding: 0.5rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de texto uniforme */
+    border: 1px solid #ccc; /* Borde consistente */
+    border-radius: 4px; /* Bordes redondeados */
+    font-family: 'Poppins', sans-serif; /* Familia tipográfica */
+    box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho */
+}
+
+.contact-form textarea {
+    height: 120px; /* Altura fija */
+    resize: none; /* Evita el redimensionamiento del textarea */
+    overflow-y: auto; /* Muestra un scroll vertical si el contenido es mayor al alto */
+}
+
+
+.contact-form button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
     color: white;
+    background-color: #474d47;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.contacto {
+.contact-form button:hover {
+    background-color: #3d413d;
+}
+
+/* Social Sidebar */
+.social-sidebar {
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
-    justify-content: end;
-    gap: 30px;
-    font-size: 35px;
-    padding: 50px 30px 30px 0;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 1000;
 }
 
-.contacto a:hover{
-    color: #a6a6a6 !important;
+.social-sidebar a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-sidebar a:hover {
+    color: white;
+    transform: translateX(-5px);
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container {
+        margin-right: 0;
+    }
+
+    .navbar {
+        right: 0;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-container {
+        flex-direction: column; /* Cambia la dirección a vertical */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem; /* Reduce el espacio entre enlaces */
+    }
+
+    .encabezado {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .nombre {
+        font-size: 2.5rem; /* Ajusta el tamaño de la fuente */
+    }
+    
+    .saludo,
+    .presentacion {
+        padding: 0 1rem;
+    }
+    
+    .proyectos {
+        padding: 2rem 1rem;
+        margin: 2rem 0; /* Reduce los márgenes laterales */
+    }
+    
+    .projects-grid {
+        display: grid; /* Asegura que siga siendo un grid */
+        grid-template-columns: 1fr; /* Una sola columna */
+        justify-content: center; /* Centra las tarjetas horizontalmente */
+        align-items: center; /* Centra las tarjetas verticalmente (si es necesario) */
+        gap: 1.5rem; /* Espaciado entre tarjetas */
+        padding: 1rem 0; /* Añade espacio alrededor del grid */
+        margin: 0 auto; /* Centra el contenedor */
+    }
+    
+    .project-card {
+        width: 38vh;
+    }
+
+    .project-card img {
+        height: 150px; /* Ajusta la altura de las imágenes */
+    }
+    
+    .project-card h3 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+    
+    .icon-container {
+        font-size: x-large;
+    }
+    
+    .contact {
+        max-width: 100%; /* Ocupa el ancho completo */
+        margin: 2rem 0; /* Ajusta los márgenes */
+        padding: 2rem 1rem;
+        margin-left: 0;
+    }
+    
+    .contact-title h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-form {
+        gap: 0.5rem; /* Reduce el espacio entre campos */
+        margin: 0; /* Elimina márgenes laterales */
+    }
+    
+    .social-sidebar {
+        position: static; /* Cambia la barra lateral a estática */
+        flex-direction: row; /* Cambia los íconos a una fila */
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .social-sidebar a, .social-sidebar a:hover {
+        transition: none;
+        transform: none;
+    }
+    
+    footer {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        padding: 1rem 0;
+    }
 }
