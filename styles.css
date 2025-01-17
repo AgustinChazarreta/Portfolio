@@ -418,3 +418,55 @@ footer {
         padding: 1rem 0;
     }
 }
+
+
+/* Estilos para el modo claro */
+body.light-mode {
+    background: #fafafa;
+    color: #111111;
+}
+
+body.light-mode .navbar,
+body.light-mode .encabezado,
+body.light-mode .encabezado .header-content p {
+    background: #fafafa;
+    color: #111111;
+}
+
+body.light-mode .proyectos .titulo,
+body.light-mode footer,
+body.light-mode .proyectos .descrip {
+    color: #111111;
+}
+body.light-mode .proyectos,
+body.light-mode .contact {
+    background: #e0e0e0;
+}
+
+body.light-mode .proyectos .project-card{
+    background: #fafafa;
+    border-color: #d0d0d0;
+}
+body.light-mode .proyectos .project-card p,
+body.light-mode .proyectos .project-card a {
+    color: #0F1215;
+}
+
+
+body.light-mode .navbar a, 
+body.light-mode .social-sidebar a{
+    color: #0F1215;
+} 
+
+
+/* Botón de toggle */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+}
