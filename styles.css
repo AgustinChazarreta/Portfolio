@@ -97,16 +97,18 @@ body {
 /* Projects Section */
 .proyectos {
     padding: 3rem 5%;
+    padding-top: 1rem;
     background: #13161A;
     margin: 3rem;
     margin-left: 6rem;
     border-radius: 10px;
+    scroll-margin-top: 70px; /* Ajusta según la altura del navbar */
 }
 
 .titulo {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 400;
 }
 
 .descrip {
@@ -141,7 +143,7 @@ body {
     height: 200px;
     object-fit: cover;
     object-position: top; /* Asegura que la parte superior sea visible */
-
+    
     border-radius: 4px;
     opacity: 0.45;
     transition: opacity 0.3s ease;
@@ -225,6 +227,7 @@ body {
     padding: 38px;
     border-radius: 10px;
     margin-left: 20rem;
+    scroll-margin-top: 35px; /* Ajusta según la altura del navbar */
 }
 
 .contact-title {
@@ -233,7 +236,9 @@ body {
 }
 
 .contact-title h2 {
-    font-size: 2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
     margin-bottom: 0.5rem;
 }
 
@@ -267,6 +272,7 @@ body {
 
 
 .contact-form button {
+    font-family: 'Poppins', sans-serif;
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     color: white;
@@ -433,8 +439,8 @@ body.light-mode .encabezado .header-content p {
     color: #111111;
 }
 
-body.light-mode .proyectos .titulo,
 body.light-mode footer,
+body.light-mode .proyectos .titulo,
 body.light-mode .proyectos .descrip {
     color: #111111;
 }
