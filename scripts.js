@@ -1,3 +1,21 @@
+// Menú hamburguesa
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Cierra el menú si se hace clic fuera
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            navLinks.classList.remove('active');
+        }
+    });
+});
+
+
 // Botón para alternar entre modo oscuro y claro
 const toggleButton = document.querySelector('.dark-mode-toggle');
 
