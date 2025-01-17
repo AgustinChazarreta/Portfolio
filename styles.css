@@ -105,6 +105,19 @@ body {
     scroll-margin-top: 70px; /* Ajusta según la altura del navbar */
 }
 
+.proyectos,
+.contact {
+    opacity: 0;
+    transform: translateY(50px); /* Desplaza hacia abajo */
+    transition: all 0.8s ease; /* Transición suave */
+}
+
+.proyectos.visible,
+.contact.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .titulo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 3rem;
@@ -137,6 +150,7 @@ body {
     transform: scale(1.03);
     border-color: rgba(255, 255, 255, 0.3);
 }
+
 
 .project-card img {
     width: 100%;
@@ -318,6 +332,59 @@ footer {
     font-family: 'Bebas Neue', sans-serif;
 }
 
+
+/* Estilos para el modo claro */
+body.light-mode {
+    background: #fafafa;
+    color: #111111;
+}
+
+body.light-mode .navbar,
+body.light-mode .encabezado,
+body.light-mode .encabezado .header-content p {
+    background: #fafafa;
+    color: #111111;
+}
+
+body.light-mode footer,
+body.light-mode .proyectos .titulo,
+body.light-mode .proyectos .descrip {
+    color: #111111;
+}
+body.light-mode .proyectos,
+body.light-mode .contact {
+    background: #e0e0e0;
+}
+
+body.light-mode .proyectos .project-card{
+    background: #fafafa;
+    border-color: #d0d0d0;
+}
+body.light-mode .proyectos .project-card p,
+body.light-mode .proyectos .project-card a, 
+body.light-mode .navbar a, 
+body.light-mode .social-sidebar a {
+    color: #0F1215;
+}
+
+body.light-mode .social-sidebar a{
+    font-size: x-large;
+} 
+
+
+/* Botón de toggle */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
@@ -423,56 +490,16 @@ footer {
         font-size: 0.9rem; /* Reduce el tamaño del texto */
         padding: 1rem 0;
     }
-}
 
-
-/* Estilos para el modo claro */
-body.light-mode {
-    background: #fafafa;
-    color: #111111;
-}
-
-body.light-mode .navbar,
-body.light-mode .encabezado,
-body.light-mode .encabezado .header-content p {
-    background: #fafafa;
-    color: #111111;
-}
-
-body.light-mode footer,
-body.light-mode .proyectos .titulo,
-body.light-mode .proyectos .descrip {
-    color: #111111;
-}
-body.light-mode .proyectos,
-body.light-mode .contact {
-    background: #e0e0e0;
-}
-
-body.light-mode .proyectos .project-card{
-    background: #fafafa;
-    border-color: #d0d0d0;
-}
-body.light-mode .proyectos .project-card p,
-body.light-mode .proyectos .project-card a {
-    color: #0F1215;
-}
-
-
-body.light-mode .navbar a, 
-body.light-mode .social-sidebar a{
-    color: #0F1215;
-} 
-
-
-/* Botón de toggle */
-.dark-mode-toggle {
-    position: fixed;
-    bottom: 1rem;
-    right: 2rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 1000;
+    /* Botón de toggle */
+    .dark-mode-toggle {
+        position: fixed;
+        bottom: 0.6rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        z-index: 1000;
+    }
 }

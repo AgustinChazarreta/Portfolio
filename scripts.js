@@ -16,3 +16,14 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+// Animación de las tarjetas al aparecer en el viewport
+const seccionesAnimadas = document.querySelectorAll('.proyectos, .contact');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.15 });
+
+seccionesAnimadas.forEach(section => observer.observe(section));
