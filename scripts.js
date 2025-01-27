@@ -60,5 +60,27 @@ const observer = new IntersectionObserver(entries => {
         }
     });
 }, { threshold: 0.15 });
-
 seccionesAnimadas.forEach(section => observer.observe(section));
+
+// Mensaje indicando que se copió el mail en el portapapeles
+document.getElementById("copyEmail").addEventListener("click", function (e) {
+    e.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+    const email = "agustinchazarreta00@gmail.com";   
+    // Usar la API Clipboard para copiar al portapapeles
+    navigator.clipboard.writeText(email).then(() => {
+        const toast = document.createElement("div");
+        toast.textContent = `Mail copiado!`;
+        toast.className = "toast-message";
+        document.body.appendChild(toast);
+        // Agregar efecto de "fade-out" después de 2 segundos
+        setTimeout(() => {
+            toast.classList.add("fade-out");
+        }, 2000);
+        // Eliminar el mensaje después de que termine la animación
+        setTimeout(() => {
+            toast.remove();
+        }, 3000); // Total: 2s de espera + 1s de transición
+    }).catch(err => {
+        console.error("Error al copiar el email: ", err);
+    });
+});
