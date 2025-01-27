@@ -22,7 +22,12 @@
                 <a href="#contact">Contacto</a>
             </div>
         </div>
-        <button class="dark-mode-toggle"><i class="fa-solid fa-moon" style="color: #ffffff;"></i></button>
+        <div class="toggle-switch">
+            <label class="switch-label">
+                <input type="checkbox" class="checkbox" id="toggle">
+                <span class="slider"></span>
+            </label>
+        </div>  
     </nav>
 
     
@@ -44,12 +49,12 @@
             
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="imgs/Proyecto1.png" alt="PetZone">
+                    <img src="imgs/Proyecto1.png" alt="Screenshot de PetZone">
                     <h3>PetZone</h3>
                     <p>Una plataforma de comercio electrónico diseñada para facilitar la compra de alimentos y productos para mascotas de manera sencilla y accesible.</p>
                     <div class="icon-container">     
                         <div class="tech-stack">
-                            <i class="fa-brands fa-html5 fa-lg" style="color: #ef652d;"></i>
+                            <i id="html" class="fa-brands fa-html5 fa-lg" style="color: #ef652d;"></i>
                             <i class="fa-brands fa-css3-alt fa-lg" style="color: #239eeb;"></i>
                             <i class="fa-brands fa-square-js fa-lg" style="color: #f6e019;"></i>
                             <i class="fa-brands fa-bootstrap fa-lg" style="color: #6b41e6;"></i>
@@ -65,9 +70,9 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="..." alt="Imagen del Proyecto 2 pendiente de agregar">
-                    <h3>Proyecto 2</h3>
-                    <p>Proximamente...</p>
+                    <img src="imgs/Proyecto2.png" alt="Screenshot de REST Countries API">
+                    <h3>REST Countries API</h3>
+                    <p>Aplicación web que permite obtener información sobre cualquier país. Se pueden buscar países, filtrarlos por regiones y ver información detallada sobre cada uno.</p>
                     <div class="icon-container">     
                         <div class="tech-stack">
                             <i class="fa-brands fa-html5 fa-lg" style="color: #ef652d;"></i>
@@ -75,10 +80,10 @@
                             <i class="fa-brands fa-square-js fa-lg" style="color: #f6e019;"></i>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank">
+                            <a href="https://github.com/AgustinChazarreta/REST-Countries-API" target="_blank">
                                 <i class="fa-brands fa-github"></i>
                             </a>
-                            <a href="#" target="_blank">
+                            <a href="https://agustinchazarreta.github.io/REST-Countries-API/" target="_blank">
                                 <i class="fa-solid fa-globe"></i>
                             </a>
                         </div>
@@ -117,10 +122,10 @@
             <a href="https://www.linkedin.com/in/agustin-chazarreta" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a href="#" target="_blank">
+            <a href="#">
                 <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="mailto:agustinchazarreta00@gmail.com">
+            <a href="mailto:agustinchazarreta00@gmail.com"  onclick="return false;">
                 <i class="fa-regular fa-envelope"></i>
             </a>
         </div>

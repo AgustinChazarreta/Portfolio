@@ -15,13 +15,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
 // Botón para alternar entre modo oscuro y claro
-const toggleButton = document.querySelector('.dark-mode-toggle');
+const toggleButton = document.querySelector('.toggle-switch');
 
-toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    toggleButton.innerHTML = document.body.classList.contains('light-mode') ? '<i class="fa-regular fa-sun"></i>' : '<i class="fa-solid fa-moon" style="color: #ffffff;"></i>';
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('toggle');
+
+    // Verificar el estado del modo oscuro en el almacenamiento local
+    if (localStorage.getItem('light-mode') === 'enabled') {
+        document.body.classList.add('light-mode');
+        toggle.checked = true;
+        console.log('light mode toggle');
+    }
+
+    toggle.addEventListener('change', function() {
+        if (this.checked) {
+            document.body.classList.add('light-mode');
+            localStorage.setItem('light-mode', 'enabled');
+            console.log('light mode toggle');
+        } else {
+            document.body.classList.remove('light-mode');
+            localStorage.setItem('light-mode', 'disabled');
+            console.log('dark mode toggle');
+        }
+    });
 });
 
 // Scroll suave para enlaces del navbar
