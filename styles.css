@@ -277,13 +277,19 @@ body {
     display: flex;
     gap: 1rem;
     margin: 0rem 1rem;
+    align-items: center;
 }
 
-.tech-stack i {
+.tech-stack i, .tech-stack img {
     opacity: 0.7;
 }
 
-.tech-stack i:hover {
+.tech-stack img {
+    width: 40px;
+    height: 40px;
+}
+
+.tech-stack i:hover, img:hover {
     cursor: pointer;
 } 
 
@@ -536,6 +542,11 @@ footer {
         font-size: x-large;
     }
     
+    .tech-stack img {
+        width: 30px;
+        height: 30px;
+    }
+
     .contact {
         max-width: 100%;
         margin: 2rem 0;
