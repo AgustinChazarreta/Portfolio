@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
+
 <body>
     <nav class="navbar">
         <button class="hamburger" aria-label="Toggle navigation">
@@ -27,18 +32,21 @@
                 <input type="checkbox" class="checkbox" id="toggle">
                 <span class="slider"></span>
             </label>
-        </div>  
+        </div>
     </nav>
 
-    
+
     <div class="main-container">
         <header id="about" class="encabezado">
             <div class="header-content">
                 <div class="nombre">Agustín Chazarreta</div>
                 <div class="saludo">Hola 👋 soy Agus</div>
                 <p class="presentacion">
-                    Soy desarrollador apasionado por la tecnología y la creación de soluciones innovadoras. Mi experiencia abarca desarrollo web, diseño responsive y proyectos de hardware, siempre con un enfoque en la funcionalidad y los detalles.
-                    Me encanta aprender, resolver problemas complejos y trabajar en equipo para transformar ideas en proyectos reales.
+                    Soy desarrollador apasionado por la tecnología y la creación de soluciones innovadoras. Mi
+                    experiencia abarca desarrollo web, diseño responsive y proyectos de hardware, siempre con un enfoque
+                    en la funcionalidad y los detalles.
+                    Me encanta aprender, resolver problemas complejos y trabajar en equipo para transformar ideas en
+                    proyectos reales.
                 </p>
             </div>
         </header>
@@ -46,13 +54,41 @@
         <section id="proyectos" class="proyectos">
             <div class="titulo">Mis proyectos</div>
             <div class="descrip">Estos son algunos de los proyectos que he creado a lo largo de mi carrera.</div>
-            
+
             <div class="projects-grid">
+                <div class="project-card">
+                    <img src="imgs/Proyecto4.png" alt="Screenshot de Task Scheduler">
+                    <h3>Task Scheduler</h3>
+                    <p>
+                        Sistema de asignación automatizada de tareas. MVC con Spring Boot, gestión multi-casa con roles
+                        y ejecución de tareas recurrentes.
+                    </p>
+                    <div class="icon-container">
+                        <div class="tech-stack">
+                            <i class="fa-brands fa-html5 fa-lg" style="color: #ef652d;"></i>
+                            <i class="fa-brands fa-css3-alt fa-lg" style="color: #239eeb;"></i>
+                            <i class="fa-brands fa-square-js fa-lg" style="color: #f6e019;"></i>
+
+                            <!-- 🔥 Backend -->
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                alt="java" width="20">
+                            <i class="devicon-spring-original colored"></i>
+                            <i class="devicon-mysql-original colored"></i>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/AgustinChazarreta/TaskScheduller" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="project-card">
                     <img src="imgs/Proyecto1.png" alt="Screenshot de PetZone">
                     <h3>PetZone</h3>
-                    <p>Una plataforma de comercio electrónico diseñada para facilitar la compra de alimentos y productos para mascotas de manera sencilla y accesible.</p>
-                    <div class="icon-container">     
+                    <p>Una plataforma de comercio electrónico diseñada para facilitar la compra de alimentos y productos
+                        para mascotas de manera sencilla y accesible.</p>
+                    <div class="icon-container">
                         <div class="tech-stack">
                             <i id="html" class="fa-brands fa-html5 fa-lg" style="color: #ef652d;"></i>
                             <i class="fa-brands fa-css3-alt fa-lg" style="color: #239eeb;"></i>
@@ -72,8 +108,9 @@
                 <div class="project-card">
                     <img src="imgs/Proyecto2.png" alt="Screenshot de REST Countries API">
                     <h3>REST Countries API</h3>
-                    <p>Aplicación web que permite obtener información sobre cualquier país. Se pueden buscar países, filtrarlos por regiones y ver información detallada sobre cada uno.</p>
-                    <div class="icon-container">     
+                    <p>Aplicación web que permite obtener información sobre cualquier país. Se pueden buscar países,
+                        filtrarlos por regiones y ver información detallada sobre cada uno.</p>
+                    <div class="icon-container">
                         <div class="tech-stack">
                             <i class="fa-brands fa-html5 fa-lg" style="color: #ef652d;"></i>
                             <i class="fa-brands fa-css3-alt fa-lg" style="color: #239eeb;"></i>
@@ -92,8 +129,9 @@
                 <div class="project-card">
                     <img src="imgs/Proyecto3.png" alt="Screenshot de Django CRUD">
                     <h3>Django CRUD</h3>
-                    <p>Proyecto basado en Django que implementa un sistema CRUD, que permite a los usuarios registrarse, iniciar sesión y gestionar tareas.</p>
-                    <div class="icon-container">     
+                    <p>Proyecto basado en Django que implementa un sistema CRUD, que permite a los usuarios registrarse,
+                        iniciar sesión y gestionar tareas.</p>
+                    <div class="icon-container">
                         <div class="tech-stack">
                             <i class="fa-brands fa-html5 fa-lg" style="color: #ef652d;"></i>
                             <img src="./imgs/python.png" alt="python-icon">
@@ -109,13 +147,14 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="contact" class="contact">
             <div class="contact-title">
                 <h2>Contacto</h2>
-                <p>Si deseas ponerte en contacto conmigo, puedes utilizar el formulario a continuación o mis redes sociales.</p>
+                <p>Si deseas ponerte en contacto conmigo, puedes utilizar el formulario a continuación o mis redes
+                    sociales.</p>
             </div>
-    
+
             <form class="contact-form">
                 <div>
                     <label for="name">Nombre</label>
@@ -132,7 +171,7 @@
                 <button type="submit">Enviar mensaje</button>
             </form>
         </section>
-        
+
         <div class="social-sidebar">
             <a href="https://github.com/AgustinChazarreta" target="_blank">
                 <i class="fa-brands fa-github"></i>
@@ -147,7 +186,7 @@
                 <i class="fa-regular fa-envelope"></i>
             </a>
         </div>
-        
+
         <footer>
             <div>© Agustín Chazarreta 2025</div>
         </footer>
@@ -156,4 +195,5 @@
     <script src="https://kit.fontawesome.com/2ac44d6498.js" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
 </body>
+
 </html>
